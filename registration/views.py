@@ -91,7 +91,7 @@ def registration(request):
                 )
                 login(request, user)
                 messages.success (request, "Вы успешно зарегестрированы!")
-                return redirect('edit_person', id=last_i+1)
+                # return redirect('edit_person', id=last_i+1)
             else:
                 messages.error(request, "Вы ввели неверный код!")
                 disabled2 = ""
@@ -176,7 +176,7 @@ def MyLoginView(request):
                     messages.success (request, "Вы успешно залогинили!")
                     login(request, user)
                     current_user = request.user.personshop.id
-                    return redirect('person', id=current_user)
+                    # return redirect('person', id=current_user)
                 else:
                     messages.error(request, "Вы ввели неверный код!")
                 disabled2 = ""
